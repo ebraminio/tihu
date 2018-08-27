@@ -33,14 +33,13 @@ script:
   # g2p-seq2seq-tihudict
   - curl -sLO https://github.com/tihu-nlp/g2p-seq2seq-tihudict/raw/master/g2p-seq2seq-tihudict.tar.gz
   - tar zxvf g2p-seq2seq-tihudict.tar.gz
-  - cp -r g2p-seq2seq-tihudict src/build/data/g2p-seq2seq-tihudict
+  - cp -r g2p-seq2seq-tihudict/* src/build/data/g2p-seq2seq-tihudict
   # g2p-seq2seq-model-6.2-cmudict
   - curl -sLO https://sourceforge.net/projects/cmusphinx/files/G2P%20Models/g2p-seq2seq-model-6.2-cmudict-nostress.tar.gz
   - tar zxvf g2p-seq2seq-model-6.2-cmudict-nostress.tar.gz
-  - cp -r g2p-seq2seq-model-6.2-cmudict-nostress src/build/data/g2p-seq2seq-cmudict
+  - cp -r g2p-seq2seq-model-6.2-cmudict-nostress/* src/build/data/g2p-seq2seq-cmudict
   # remove unnecessary files
   - rm src/build/mbrola.dll
-  - rm src/build/ttsapp.exe
   - rm src/build/.gitignore
   # tihu dll
   - cd src/tihu
@@ -56,14 +55,15 @@ script:
   - chmod a+x linuxdeployqt-continuous-x86_64.AppImage
   - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
   - ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage
-  - cd .. && tar -cvzf tihu-linux-x64.tar.gs ./build
+  - cp Tihu_console-x86_64.AppImage ../build
+  - cd ../build && tar -cvzf tihu-linux-x64.tar.gz *
 
 deploy:
   provider: releases
   api_key:
     secure: $GITHUB_OAUTH_TOKEN
   file:
-    - tihu-linux-x64.tar.gs
+    - tihu-linux-x64.tar.gz
   skip_cleanup: true
   on:
     tags: true
