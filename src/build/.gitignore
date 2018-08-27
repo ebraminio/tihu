@@ -5,3 +5,4 @@ lexicon*
 #Qt Dlls
 Qt*
 icu*
+*.raw
