@@ -23,6 +23,7 @@ make
 make test
 make install
 ```
+
 **Tihu console**
 
 *Tihu console* is a gui application that allows you to work with Tihu library. Before compiling *Tihu console* please make sure you have installed [qt](https://www.qt.io) framework. You can also find a pre-compiled version of *Tihu console* in release page for linux x64.
