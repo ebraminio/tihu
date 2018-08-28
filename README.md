@@ -25,7 +25,7 @@ make install
 ```
 **Tihu console**
 
-*Tihu console* is a gui application that allows you to work with Tihu library. Before compiling *Tihu console* please make sure you have installed [qt](https://www.qt.io) framework. You can also find a pre-compiled version of *Tihu console* in release page for linux x64.
+*Tihu console* is an gui application that allows you to work with Tihu library. Before compiling *Tihu console* please make sure you have installed [qt](https://www.qt.io) framework. You can also find a pre-compiled version of *Tihu console* in release page for linux x64.
 
 
 Note: Windows users can compile Tihu by their own risks.
