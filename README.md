@@ -1,7 +1,7 @@
 # Tihu, Persian Text-To-Speech  [![Build Status](https://travis-ci.org/tihu-nlp/tihu.svg?branch=master)](https://travis-ci.org/tihu-nlp/tihu)
 
 
-[Tihu](https://github.com/tihu-nlp/tihu) is an open source Persian text-to-speech engine. It's a cross-platform application and mostly is written in C++. It uses [Tihu g2p-seq2seq](https://github.com/tihu-nlp/g2p-seq2seq-tihudict) for Grapheme-to-Phoneme conversion.
+[Tihu](https://github.com/tihu-nlp/tihu) is an open source Persian text-to-speech engine. It's a cross-platform application and mostly is written in C++. It uses [Tihu-Dict](https://github.com/tihu-nlp/tihudict) for Grapheme-to-Phoneme conversion.
 
 
 ## Compile
